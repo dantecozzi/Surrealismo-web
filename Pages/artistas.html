@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artistas · Surrealismo</title>
+  <meta name="description" content="Biblioteca web sobre el surrealismo: artistas, obras, manifiesto y recursos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+ <link rel="icon" type="image/png" href="../../Fuentes/Isotipo.png?v=1">
+
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap row between center">
+    <a class="brand" href="../index.html" aria-label="Inicio: Surrealismo">
+      <!-- Desde /Pages/ subís dos niveles si tu carpeta Fuentes está fuera -->
+      <img src="../../Fuentes/Isologotipo.png" alt="Surrealismo" class="logo" />
+    </a>
+
+    <nav aria-label="Principal">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+
+      <ul id="menu" class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="obras.html">Obras</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <!-- Lupa + Buscador -->
+      <div class="header-search" data-hs>
+        <button class="hs-toggle" aria-label="Abrir buscador" aria-expanded="false" aria-controls="site-search">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <defs>
+              <linearGradient id="gradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"  stop-color="#7aa2ff"/>
+                <stop offset="100%" stop-color="#a477ff"/>
+              </linearGradient>
+            </defs>
+            <path d="M10.5 3a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Zm6.78 9.22 4.25 4.25-1.56 1.56-4.25-4.25 1.56-1.56Z" fill="currentColor"/>
+          </svg>
+        </button>
+
+        <form id="site-search" class="hs-form" role="search" aria-label="Buscar en el sitio" action="buscar.html" method="get">
+          <input class="hs-input" type="search" name="q" placeholder="Encontrá artistas, obras, técnicas..." autocomplete="off" spellcheck="false" aria-label="Ingresá tu búsqueda">
+          <button class="hs-submit" aria-label="Buscar">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M2 21 23 12 2 3v7l15 2-15 2v7z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>
+  <main id="contenido" class="artists-main">
+    <div class="artists-container">
+      
+      <!-- Filtros de búsqueda (1/3 izquierda) -->
+      <aside class="artists-filters">
+        <h2>Filtros</h2>
+        
+        <div class="filter-section">
+          <h3>Disciplina</h3>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="cine" class="discipline-filter">
+              <span>Cine</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="pintura" class="discipline-filter">
+              <span>Pintura</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="escultura" class="discipline-filter">
+              <span>Escultura</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="fotografia" class="discipline-filter">
+              <span>Fotografía</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="literatura" class="discipline-filter">
+              <span>Literatura</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Época</h3>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="1917-1923" class="era-filter">
+              <span>1917 - 1923</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="1924-1929" class="era-filter">
+              <span>1924 - 1929</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="1930-1939" class="era-filter">
+              <span>1930 - 1939</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="1939-1945" class="era-filter">
+              <span>1939 - 1945</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="1945-1966" class="era-filter">
+              <span>1945 - 1966</span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Contenido de artistas (2/3 derecha) -->
+      <section class="artists-content">
+        <header class="artists-header">
+          <h1>Ellos transformaron el <span class="accent">sueño</span> en <span class="accent">arte</span></h1>
+    </header>
+
+        <div class="artists-grid">
+          <!-- Artista 1 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Salvador Dalí</h2>
+              <div class="artist-photo">
+                <img src="../img/salvador dalí.jpg" alt="Salvador Dalí" />
+              </div>
+              <p class="artist-lifespan">1904 - 1989</p>
+            </div>
+            <div class="artist-biography">
+              <p>Pintor, escultor, grabador, escenógrafo y escritor español del siglo XX. Se le considera uno de los máximos representantes del surrealismo. Dalí es conocido por sus imágenes oníricas y surrealistas. Sus habilidades pictóricas se suelen atribuir a la influencia y admiración por el arte renacentista. También fue un experto dibujante. Los recursos plásticos dalinianos también abordaron el cine, la escultura y la fotografía, lo cual lo condujo a numerosas colaboraciones con otros artistas audiovisuales. Desde joven cultivó una personalidad excéntrica y provocadora, marcada por la influencia de su pareja Gala Éluard, quien se convirtió en su musa y en una figura decisiva en su vida personal y profesional.</p>
+            </div>
+          </article>
+
+          <!-- Artista 2 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">René Magritte</h2>
+              <div class="artist-photo">
+                <img src="../img/René magritte.jpg" alt="René Magritte" />
+              </div>
+              <p class="artist-lifespan">1898 - 1967</p>
+            </div>
+            <div class="artist-biography">
+              <p>Pintor surrealista belga. Conocido por sus ingeniosas y provocativas imágenes, pretendía con su trabajo cambiar la percepción precondicionada de la realidad y forzar al observador a hacerse hipersensible a su entorno. Magritte dotó al surrealismo de una carga conceptual basada en el juego de imágenes ambiguas y su significado denotado a través de palabras, poniendo en cuestión la relación entre un objeto pintado y uno real. A lo largo de su vida llevó una existencia tranquila y discreta en Bruselas, alejada de los excesos de otros surrealistas, y combinó su trabajo artístico con empleos como diseñador gráfico y publicitario.</p>
+            </div>
+          </article>
+
+          <!-- Artista 3 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Max Ernst</h2>
+              <div class="artist-photo">
+                <img src="../img/Max Ernst 1.jpg" alt="Max Ernst" />
+              </div>
+              <p class="artist-lifespan">1891 - 1976</p>
+            </div>
+            <div class="artist-biography">
+              <p>Artista alemán nacionalizado francés que fue una figura fundamental tanto en el movimiento dadá como en el surrealismo. Conocido por su obra experimental, Ernst desarrolló técnicas como el frottage, el grattage y el collage. Su trabajo se caracteriza por la creación de mundos híbridos y fantásticos, explorando el inconsciente y los sueños a través de imágenes perturbadoras y poéticas. Su biografía estuvo marcada por dos guerras mundiales: fue reclutado como soldado en la Primera Guerra Mundial, una experiencia traumática que lo llevó a rechazar la autoridad y a cuestionar profundamente la sociedad, rasgo que impregnó toda su producción artística.</p>
+            </div>
+          </article>
+
+          <!-- Artista 4 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">André Breton</h2>
+              <div class="artist-photo">
+                <img src="../img/André Breton 1.jpg" alt="André Breton" />
+              </div>
+              <p class="artist-lifespan">1896 - 1966</p>
+            </div>
+            <div class="artist-biography">
+              <p>Escritor, poeta, ensayista y teórico del surrealismo, reconocido como el fundador y principal exponente de este movimiento artístico y literario. Escribió el Manifiesto del Surrealismo en 1924, donde definió el movimiento como "automatismo psíquico puro". Breton fue el líder indiscutible del grupo surrealista parisino y su figura central, tanto por su personalidad carismática como por su capacidad teórica y organizativa. Formado inicialmente en medicina, se especializó en psiquiatría durante la Primera Guerra Mundial, lo que lo acercó a las teorías de Sigmund Freud y despertó su interés por lo inconsciente, decisivo para el desarrollo de su visión artística.</p>
+            </div>
+          </article>
+
+          <!-- Artista 5 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Luis Buñuel</h2>
+              <div class="artist-photo">
+                <img src="../img/Luis buñuel.jpg" alt="Luis Buñuel" />
+              </div>
+              <p class="artist-lifespan">1900 - 1983</p>
+            </div>
+            <div class="artist-biography">
+              <p>Director, guionista y productor de cine español del siglo XX. Es considerado uno de los grandes maestros del surrealismo cinematográfico. Su obra se caracteriza por la exploración de los sueños, lo irracional y la crítica mordaz a las instituciones sociales y religiosas. Buñuel combinó imágenes oníricas con una narrativa cargada de simbolismo. Su formación en la Residencia de Estudiantes en Madrid y su contacto con artistas como Salvador Dalí y Federico García Lorca marcaron su visión artística. A lo largo de su carrera trabajó en España, Francia y México, dejando una filmografía que redefinió el lenguaje del cine moderno.</p>
+            </div>
+          </article>
+
+          <!-- Artista 6 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Jean Cocteau</h2>
+              <div class="artist-photo">
+                <img src="../img/Jean cocteau.jpg" alt="Jean Cocteau" />
+              </div>
+              <p class="artist-lifespan">1889 - 1963</p>
+            </div>
+            <div class="artist-biography">
+              <p>Poeta, novelista, dramaturgo, cineasta y diseñador francés del siglo XX. Se le considera una figura clave de las vanguardias y un gran representante del surrealismo en la literatura y el cine. Cocteau desarrolló una obra polifacética, en la que combinó la escritura con la experimentación visual y escénica. Sus películas, cargadas de imágenes poéticas y simbólicas, marcaron un nuevo camino para el cine de autor europeo. Su amistad con artistas como Pablo Picasso y su participación en proyectos interdisciplinarios muestran la amplitud de su creatividad. Fue un creador que desdibujó las fronteras entre las artes.</p>
+          </article>
+
+          <!-- Artista 7 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Man Ray</h2>
+              <div class="artist-photo">
+                <img src="../img/Man ray.jpg" alt="Man Ray" />
+              </div>
+              <p class="artist-lifespan">1890 - 1976</p>
+            </div>
+            <div class="artist-biography">
+              <p>Pintor, fotógrafo y cineasta estadounidense del siglo XX, asociado al dadaísmo y posteriormente al surrealismo. Es reconocido principalmente por sus innovaciones en la fotografía, especialmente por el uso experimental de técnicas como la solarización y los "rayogramas". Su obra exploró lo inconsciente, lo azaroso y lo poético a través de la imagen. También desarrolló pinturas y objetos escultóricos que dialogaban con las ideas vanguardistas de su tiempo. Radicado gran parte de su vida en París, colaboró con numerosos artistas surrealistas y se convirtió en una de las figuras más influyentes en la relación entre arte y experimentación fotográfica.</p>
+            </div>
+          </article>
+
+          <!-- Artista 8 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Maya Deren</h2>
+              <div class="artist-photo">
+                <img src="../img/Maya deren.webp" alt="Maya Deren" />
+              </div>
+              <p class="artist-lifespan">1917 - 1961</p>
+            </div>
+            <div class="artist-biography">
+              <p>Cineasta, coreógrafa, escritora y teórica del cine estadounidense del siglo XX. Es considerada una de las pioneras del cine experimental y una de las principales referentes del surrealismo audiovisual en América. Su obra se caracteriza por la exploración de los sueños, los rituales y el movimiento, donde lo cotidiano adquiere un carácter onírico. Deren integró la danza y la poesía en sus películas, creando un lenguaje visual único. También desarrolló escritos sobre teoría cinematográfica que influyeron en generaciones posteriores de cineastas. Su legado la consolidó como una de las voces más innovadoras del cine independiente.</p>
+            </div>
+          </article>
+
+          <!-- Artista 9 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">André Masson</h2>
+              <div class="artist-photo">
+                <img src="../img/André masson.jpg" alt="André Masson" />
+              </div>
+              <p class="artist-lifespan">1896 - 1987</p>
+            </div>
+            <div class="artist-biography">
+              <p>Pintor y dibujante francés del siglo XX, reconocido como una de las figuras clave del surrealismo. Su obra se centró en la experimentación con el automatismo, técnica que buscaba plasmar lo inconsciente de manera espontánea. Masson creó composiciones cargadas de energía, donde el trazo libre y el azar eran protagonistas. También trabajó en la ilustración y colaboró con escritores surrealistas, aportando imágenes que complementaban la literatura del movimiento. Su estilo evolucionó hacia una pintura más estructurada, pero siempre mantuvo el interés por los mundos interiores y las pulsiones humanas.</p>
+            </div>
+          </article>
+
+          <!-- Artista 10 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Joan Miró</h2>
+              <div class="artist-photo">
+                <img src="../img/Joan miró.webp" alt="Joan Miró" />
+              </div>
+              <p class="artist-lifespan">1893 - 1983</p>
+            </div>
+            <div class="artist-biography">
+              <p>Pintor, escultor y ceramista español del siglo XX. Es considerado uno de los grandes exponentes del surrealismo, aunque desarrolló un estilo personal que trascendió las etiquetas de las vanguardias. Su obra se distingue por el uso de colores vivos, formas orgánicas y símbolos que evocan lo infantil, lo onírico y lo poético. Miró exploró diferentes disciplinas artísticas, desde la pintura hasta la escultura monumental y el trabajo con cerámica. Su producción buscó constantemente liberar la imaginación, acercando el arte a lo universal y lo fantástico. Se lo reconoce como uno de los artistas más influyentes de su tiempo.</p>
+            </div>
+          </article>
+
+          <!-- Artista 11 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Alberto Giacometti</h2>
+              <div class="artist-photo">
+                <img src="../img/Alberto giacometti.jpg" alt="Alberto Giacometti" />
+              </div>
+              <p class="artist-lifespan">1901 - 1966</p>
+            </div>
+            <div class="artist-biography">
+              <p>Escultor y pintor suizo del siglo XX, asociado al surrealismo y más tarde al existencialismo. Es reconocido por sus figuras alargadas y estilizadas, que expresan fragilidad, soledad y la condición humana. En sus primeros años trabajó dentro del lenguaje surrealista, explorando lo onírico y lo simbólico en esculturas y objetos poéticos. Posteriormente desarrolló un estilo personal en el que la figura humana se convirtió en el centro de su investigación artística. Su obra tuvo una gran influencia en el arte moderno, situándolo como uno de los escultores más importantes del siglo pasado.</p>
+            </div>
+          </article>
+
+          <!-- Artista 12 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Yves Tanguy</h2>
+              <div class="artist-photo">
+                <img src="../img/Yves tanguy.jpg" alt="Yves Tanguy" />
+              </div>
+              <p class="artist-lifespan">1900 - 1955</p>
+            </div>
+            <div class="artist-biography">
+              <p>Pintor francés del siglo XX, considerado uno de los grandes representantes del surrealismo. Su obra se caracteriza por paisajes oníricos y abstractos, poblados de formas biomórficas que parecen flotar en escenarios infinitos. Inspirado por la escritura automática y la exploración del inconsciente, Tanguy creó un universo pictórico único, sin referentes directos en la realidad. Su estilo influyó en artistas posteriores, especialmente en el arte abstracto estadounidense. Radicado en Estados Unidos tras la Segunda Guerra Mundial, continuó desarrollando su lenguaje visual hasta su muerte.</p>
+            </div>
+          </article>
+
+          <!-- Artista 13 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Paul Delvaux</h2>
+              <div class="artist-photo">
+                <img src="../img/Paul delvaux.webp" alt="Paul Delvaux" />
+              </div>
+              <p class="artist-lifespan">1897 - 1994</p>
+            </div>
+            <div class="artist-biography">
+              <p>Pintor belga del siglo XX, asociado al surrealismo aunque mantuvo una voz muy personal. Es conocido por sus escenas enigmáticas donde mujeres desnudas, esqueletos y arquitecturas clásicas conviven en atmósferas silenciosas y poéticas. Su obra combina la precisión académica con lo onírico, generando un contraste entre lo realista y lo fantástico. Delvaux exploró la representación del tiempo detenido y la introspección, creando imágenes cargadas de misterio. Su singular visión lo convirtió en uno de los pintores más destacados del surrealismo belga.</p>
+            </div>
+          </article>
+
+          <!-- Artista 14 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Leonora Carrington</h2>
+              <div class="artist-photo">
+                <img src="../img/Leonora carrington.jpg" alt="Leonora Carrington" />
+              </div>
+              <p class="artist-lifespan">1917 - 2011</p>
+            </div>
+            <div class="artist-biography">
+              <p>Pintora y escritora británica-mexicana del siglo XX, considerada una de las figuras más originales del surrealismo. Su obra pictórica se caracteriza por la creación de universos oníricos habitados por seres fantásticos, símbolos esotéricos y referencias mitológicas. Carrington también desarrolló una destacada producción literaria, en la que exploró lo mágico, lo inconsciente y lo femenino. Tras instalarse en México, se integró a la comunidad de artistas e intelectuales surrealistas, convirtiéndose en una voz fundamental dentro del movimiento. Su arte refleja una visión personal en la que confluyen la libertad creativa y la búsqueda espiritual.</p>
+            </div>
+          </article>
+
+          <!-- Artista 15 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Remedios Varo</h2>
+              <div class="artist-photo">
+                <img src="../img/Remedios varo.webp" alt="Remedios Varo" />
+              </div>
+              <p class="artist-lifespan">1908 - 1963</p>
+            </div>
+            <div class="artist-biography">
+              <p>Pintora española-mexicana del siglo XX, reconocida como una de las grandes representantes del surrealismo en América Latina. Su obra se distingue por escenas cargadas de misterio, en las que conviven la ciencia, la alquimia, la magia y el inconsciente. Varo desarrolló un estilo minucioso, con un gran cuidado en los detalles y un fuerte componente narrativo. Tras su exilio en México, se unió al círculo de artistas surrealistas y creó algunas de sus piezas más emblemáticas. Su legado artístico ha sido fundamental en la construcción de una visión femenina y poética dentro del surrealismo.</p>
+            </div>
+          </article>
+
+          <!-- Artista 16 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Jean Arp (Hans Arp)</h2>
+              <div class="artist-photo">
+                <img src="../img/Jean arp.jpg" alt="Jean Arp (Hans Arp)" />
+              </div>
+              <p class="artist-lifespan">1886 - 1966</p>
+            </div>
+            <div class="artist-biography">
+              <p>Escultor, pintor y poeta franco-alemán del siglo XX, vinculado tanto al dadaísmo como al surrealismo. Su obra se caracteriza por formas orgánicas y abstractas que evocan lo natural, lo biológico y lo espontáneo. Arp exploró la escultura, la pintura y la poesía visual, manteniendo siempre un interés en el azar y la improvisación como motores creativos. Colaboró con importantes figuras de las vanguardias europeas y dejó una producción diversa e influyente. Su trabajo lo consagra como uno de los artistas más versátiles y singulares del movimiento surrealista.</p>
+            </div>
+          </article>
+
+          <!-- Artista 17 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Alexander Calder</h2>
+              <div class="artist-photo">
+                <img src="../img/Alexander calder.jpg" alt="Alexander Calder" />
+              </div>
+              <p class="artist-lifespan">1898 - 1976</p>
+            </div>
+            <div class="artist-biography">
+              <p>Escultor estadounidense del siglo XX, célebre por la invención de los móviles, esculturas en movimiento que revolucionaron el arte moderno. Su obra, vinculada al surrealismo y al constructivismo, se caracteriza por la combinación de formas abstractas y colores vivos que parecían cobrar vida en el espacio. También desarrolló los estábiles, piezas estáticas de gran formato. Calder llevó la escultura hacia una dimensión lúdica y dinámica, integrando el azar y el movimiento real como parte del proceso artístico. Es considerado uno de los grandes innovadores de la escultura contemporánea.</p>
+            </div>
+          </article>
+
+          <!-- Artista 18 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Isamu Noguchi</h2>
+              <div class="artist-photo">
+                <img src="../img/Isamu noguchi.avif" alt="Isamu Noguchi" />
+              </div>
+              <p class="artist-lifespan">1904 - 1988</p>
+            </div>
+            <div class="artist-biography">
+              <p>Escultor y diseñador estadounidense de origen japonés del siglo XX. Su producción artística, influida por el surrealismo y el modernismo, se distingue por la fusión entre formas orgánicas y geométricas. Noguchi trabajó en múltiples disciplinas: escultura, mobiliario, diseño de jardines y escenografía teatral. Sus obras transmiten una profunda conexión con la naturaleza y una búsqueda de armonía entre Oriente y Occidente. Con su versatilidad y originalidad, se consolidó como una figura clave en el arte y el diseño del siglo pasado.</p>
+            </div>
+          </article>
+
+          <!-- Artista 19 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Claude Cahun</h2>
+              <div class="artist-photo">
+                <img src="../img/Claude cahun.jpg" alt="Claude Cahun" />
+              </div>
+              <p class="artist-lifespan">1894 - 1954</p>
+            </div>
+            <div class="artist-biography">
+              <p>Artista, escritora y fotógrafa francesa del siglo XX, asociada al surrealismo y a la exploración de la identidad. Su obra se caracteriza por los autorretratos fotográficos en los que desafió los roles de género, las convenciones sociales y la noción fija del yo. A través de imágenes teatrales y poéticas, Cahun creó un lenguaje visual adelantado a su tiempo. También escribió ensayos y textos de tono surrealista. Su trabajo, redescubierto en las últimas décadas, la sitúa como una figura pionera en la reflexión artística sobre la identidad y la subversión cultural.</p>
+            </div>
+          </article>
+
+          <!-- Artista 20 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Lee Miller</h2>
+              <div class="artist-photo">
+                <img src="../img/Lee miller.jpg" alt="Lee Miller" />
+              </div>
+              <p class="artist-lifespan">1907 - 1977</p>
+            </div>
+            <div class="artist-biography">
+              <p>Fotógrafa, modelo y corresponsal de guerra estadounidense del siglo XX, vinculada al surrealismo y al dadaísmo. Inició su carrera como modelo en Nueva York, pero pronto se volcó a la fotografía, colaborando estrechamente con Man Ray en París. Su obra incluye retratos, experimentación surrealista y un destacado registro fotográfico durante la Segunda Guerra Mundial. Como corresponsal documentó la liberación de los campos de concentración y la devastación de la guerra, aportando una mirada única. Su trayectoria la consagra como una de las fotógrafas más relevantes de su generación.</p>
+            </div>
+          </article>
+
+          <!-- Artista 21 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Dora Maar</h2>
+              <div class="artist-photo">
+                <img src="../img/Dora maar.jpg" alt="Dora Maar" />
+              </div>
+              <p class="artist-lifespan">1907 - 1997</p>
+            </div>
+            <div class="artist-biography">
+              <p>Fotógrafa y pintora francesa del siglo XX, vinculada al surrealismo y conocida también por su relación con Pablo Picasso. Su obra fotográfica se caracteriza por la experimentación con fotomontajes, efectos de distorsión y escenas cargadas de simbolismo onírico. Maar retrató tanto lo cotidiano como lo inquietante, generando imágenes enigmáticas y poéticas. Más allá de la fotografía, también desarrolló una producción pictórica en la que exploró el color y la abstracción. Su legado la sitúa como una figura clave del surrealismo y de la fotografía de vanguardia.</p>
+            </div>
+          </article>
+
+          <!-- Artista 22 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Raoul Ubac</h2>
+              <div class="artist-photo">
+                <img src="../img/Raoul ubac.jpg" alt="Raoul Ubac" />
+              </div>
+              <p class="artist-lifespan">1910 - 1985</p>
+            </div>
+            <div class="artist-biography">
+              <p>Fotógrafo, pintor y escultor belga del siglo XX, estrechamente ligado al movimiento surrealista. Su trabajo fotográfico se destacó por el uso de técnicas experimentales como la solarización, la sobreimpresión y la quema de negativos, con las que buscaba transformar la realidad en imágenes irreales y misteriosas. Más adelante se dedicó a la pintura y al relieve escultórico, siempre con un interés en lo matérico y lo abstracto. Ubac es recordado como un creador inquieto que aportó un enfoque innovador a la estética surrealista.</p>
+            </div>
+          </article>
+
+          <!-- Artista 23 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Brassaï</h2>
+              <div class="artist-photo">
+                <img src="../img/Brassai.jpeg" alt="Brassaï" />
+              </div>
+              <p class="artist-lifespan">1899 - 1984</p>
+            </div>
+            <div class="artist-biography">
+              <p>Seudónimo de Gyula Halász, fue un fotógrafo húngaro-francés del siglo XX, célebre por sus retratos de la vida nocturna parisina. Su obra combina el realismo con un fuerte componente poético, y fue adoptada por los surrealistas por su capacidad de revelar lo extraordinario en lo cotidiano. Brassaï retrató calles, bares, artistas y escenas urbanas cargadas de atmósfera. También incursionó en el dibujo, la escultura y la escritura, demostrando una gran versatilidad creativa. Es considerado uno de los grandes fotógrafos del siglo pasado, con una mirada única sobre la ciudad moderna.</p>
+            </div>
+          </article>
+
+          <!-- Artista 24 -->
+          <article class="artist-profile">
+            <div class="artist-details">
+              <h2 class="artist-name">Hans Bellmer</h2>
+              <div class="artist-photo">
+                <img src="../img/Hans bellmer.jpg" alt="Hans Bellmer" />
+              </div>
+              <p class="artist-lifespan">1902 - 1975</p>
+            </div>
+            <div class="artist-biography">
+              <p>Artista alemán del siglo XX, reconocido por sus inquietantes muñecas articuladas que se convirtieron en símbolos del surrealismo. Su obra exploró la obsesión, el erotismo y lo perturbador, mediante esculturas y fotografías que desafiaban las convenciones sobre el cuerpo humano. Las muñecas de Bellmer, fragmentadas y manipuladas, buscaban provocar y cuestionar los límites entre deseo, violencia y fantasía. Además de la escultura y la fotografía, realizó dibujos y grabados cargados de sensualidad y extrañeza. Su trabajo es recordado como una de las expresiones más radicales del surrealismo.</p>
+            </div>
+          </article>
+        </div>
+    </section>
+
+    </div>
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-left">
+      <a class="footer-brand" href="index.html" aria-label="Inicio: Surrealismo">
+        <!-- Usá la misma ruta de imagen que en tu header de index -->
+        <img src="../../Fuentes/Isologotipo.png" alt="Surrealismo" class="footer-logo">
+      </a>
+      <p class="copyright">© 2025 | Todos los derechos reservados | Dante Garcia Cozzi</p>
+    </div>
+
+    <div class="footer-right">
+      <!-- Instagram (linkearemos después) -->
+ <!-- IG: sin borde y con gradiente dorado en hover -->
+<a class="social-btn" href="https://www.instagram.com/portfolio.dantecozzi?igsh=MXdsb3ludncxMXF2Zg%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram · Portfolio">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+    <defs>
+      <!-- gradiente hover: #ffe692 → #ffd447 -->
+      <linearGradient id="igGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"  stop-color="#7aa2ff"/>
+        <stop offset="100%" stop-color="#a477ff"/>
+      </linearGradient>
+    </defs>
+    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18.5 6.5a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+  </svg>
+</a>
+
+    </div>
+  </div>
+</footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

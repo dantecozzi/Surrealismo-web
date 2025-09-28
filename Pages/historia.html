@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Historia · Surrealismo</title>
+  <meta name="description" content="Biblioteca web sobre el surrealismo: artistas, obras, manifiesto y recursos.">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+  <!-- Tu CSS general -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../../Fuentes/Isotipo.png?v=1">
+
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap row between center">
+      <a class="brand" href="../index.html" aria-label="Inicio: Surrealismo">
+        <img src="../../Fuentes/Isologotipo.png" alt="Surrealismo" class="logo" />
+      </a>
+
+      <nav aria-label="Principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+
+        <ul id="menu" class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a class="active" href="historia.html">Historia</a></li>
+          <li><a href="artistas.html">Artistas</a></li>
+          <li><a href="obras.html">Obras</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <!-- Lupa + Buscador -->
+        <div class="header-search" data-hs>
+          <button class="hs-toggle" aria-label="Abrir buscador" aria-expanded="false" aria-controls="site-search">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <defs>
+                <linearGradient id="gradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%"  stop-color="#7aa2ff"/>
+                  <stop offset="100%" stop-color="#a477ff"/>
+                </linearGradient>
+              </defs>
+              <path d="M10.5 3a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Zm6.78 9.22 4.25 4.25-1.56 1.56-4.25-4.25 1.56-1.56Z" fill="currentColor"/>
+            </svg>
+          </button>
+
+          <form id="site-search" class="hs-form" role="search" aria-label="Buscar en el sitio"
+                action="buscar.html" method="get">
+            <input class="hs-input" type="search" name="q"
+                   placeholder="Encontrá artistas, obras, técnicas..."
+                   autocomplete="off" spellcheck="false" aria-label="Ingresá tu búsqueda">
+            <button class="hs-submit" aria-label="Buscar">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M2 21 23 12 2 3v7l15 2-15 2v7z"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="wrap historia">
+    <header class="page-header">
+      <h1>Los orígenes del <span class="accent">inconsciente</span></h1>
+    </header>
+
+    <!-- Nubes clickeables -->
+    <section class="clouds">
+      <!-- IZQUIERDA → el vanguardismo.html -->
+      <figure class="cloud cloud--left">
+        <img src="../../Fuentes/Nube.png" alt="" aria-hidden="true">
+        <span class="cloud-title">El vanguardismo</span>
+        <span class="cloud-rain" aria-hidden="true"></span>
+        <a class="cloud-hotspot" href="el vanguardismo.html" aria-label="Ir a: El vanguardismo"></a>
+      </figure>
+
+      <!-- MEDIO → el movimiento.html -->
+      <figure class="cloud cloud--middle">
+        <img src="../../Fuentes/Nube.png" alt="" aria-hidden="true">
+        <span class="cloud-title">El movimiento</span>
+        <span class="cloud-rain" aria-hidden="true"></span>
+        <a class="cloud-hotspot" href="el movimiento.html" aria-label="Ir a: El movimiento"></a>
+      </figure>
+
+      <!-- DERECHA → el manifiesto.html -->
+      <figure class="cloud cloud--right">
+     <img src="../../Fuentes/Nube.png" alt="" aria-hidden="true">
+        <span class="cloud-title">El manifiesto</span>
+        <span class="cloud-rain" aria-hidden="true"></span>
+        <a class="cloud-hotspot" href="el manifiesto.html" aria-label="Ir a: El manifiesto"></a>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-left">
+        <a class="footer-brand" href="../index.html" aria-label="Inicio: Surrealismo">
+          <img src="../../Fuentes/Isologotipo.png" alt="Surrealismo" class="footer-logo">
+        </a>
+        <p class="copyright">© 2025 | Todos los derechos reservados | Dante Garcia Cozzi</p>
+      </div>
+
+      <div class="footer-right">
+        <a class="social-btn" href="https://www.instagram.com/portfolio.dantecozzi?igsh=MXdsb3ludncxMXF2Zg%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram · Portfolio">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+            <defs>
+              <linearGradient id="igGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"  stop-color="#7aa2ff"/>
+                <stop offset="100%" stop-color="#a477ff"/>
+              </linearGradient>
+            </defs>
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18.5 6.5a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

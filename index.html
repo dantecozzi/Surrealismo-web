@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home · Surrealismo</title>
+  <meta name="description" content="Biblioteca web sobre el surrealismo: artistas, obras, manifiesto y recursos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+ <link rel="icon" type="image/png" href="../Fuentes/Isotipo.png?v=1">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+   
+    <div class="wrap row between center">
+      <a class="brand" href="index.html" aria-label="Inicio: Surrealismo">
+  <img src="../Fuentes/Isologotipo.png" alt="Surrealismo" class="logo" />
+</a>
+      <nav aria-label="Principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+        <ul id="menu" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Pages/historia.html">Historia</a></li>
+          <li><a href="Pages/artistas.html">Artistas</a></li>
+          <li><a href="Pages/obras.html">Obras</a></li>
+          <li><a href="Pages/galeria.html">Galería</a></li>
+          <li><a href="Pages/contacto.html">Contacto</a></li>
+        </ul>
+        <!-- Lupa + Buscador dentro de la nav -->
+<div class="header-search" data-hs>
+ <button class="hs-toggle" aria-label="Abrir buscador" aria-expanded="false" aria-controls="site-search">
+<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+  <defs>
+    <linearGradient id="gradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#7aa2ff"/>  <!-- azul -->
+      <stop offset="100%" stop-color="#a477ff"/> <!-- violeta -->
+    </linearGradient>
+  </defs>
+  <!-- Blanco por defecto controlado por CSS con currentColor -->
+  <path d="M10.5 3a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Zm6.78 9.22 4.25 4.25-1.56 1.56-4.25-4.25 1.56-1.56Z"
+        fill="currentColor"/>
+</svg>
+</button>
+
+  <form id="site-search" class="hs-form" role="search" aria-label="Buscar en el sitio"
+        action="Pages/buscar.html" method="get">
+    <input class="hs-input" type="search" name="q"
+           placeholder="Encontrá artistas, obras, técnicas..."
+           autocomplete="off" spellcheck="false" aria-label="Ingresá tu búsqueda">
+    <button class="hs-submit" aria-label="Buscar">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path d="M2 21 23 12 2 3v7l15 2-15 2v7z"/>
+      </svg>
+    </button>
+  </form>
+</div>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" class="wrap">
+
+    <!-- Hero / Intro -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>
+      Explorá el <span class="accent">surrealismo</span> en un solo lugar
+    </h1>
+
+    <div class="hero-intro">
+      <p class="intro-1">Descubrí la vanguardia <span class="cinzel">surrealista</span>.</p>
+<p class="intro-2">Su historia, artistas, obras y técnicas que rompieron la lógica para abrir paso al inconsciente y torcieron la mirada del siglo XX.</p>
+<p class="intro-3">Este espacio busca que explorar sea tan fácil como <span class="cinzel">sorprendente</span>.</p>
+    </div>
+
+    <!-- Mano: fuera de .hero-intro para que ocupe todo el ancho de la columna -->
+    <img class="auto-gesture"
+         src="../Fuentes/Mano con trazo automatismo.png"
+         alt="" aria-hidden="true">
+  </div>
+
+  <!-- Columna derecha: destacados -->
+  <aside class="spotlights">
+    <!-- Artista del mes -->
+    <article class="spotlight">
+      <img src="img/salvador dalí.jpg" alt="Retrato de Salvador Dalí">
+      <div class="spotlight-body">
+        <h3>Artista del mes</h3>
+        <p class="title">Salvador Dalí</p>
+        <a class="spotlight-cta" href="Pages/artistas.html#salvador-dali">Ver más →</a>
+      </div>
+    </article>
+
+    <!-- Obra del mes -->
+    <article class="spotlight">
+      <img src="img/Ceci n'esta pas une pipe.jpg" alt="René Magritte — Ceci n'est pas une pipe">
+      <div class="spotlight-body">
+        <h3>Obra del mes</h3>
+        <p class="title">"La trahison des images" — R. Magritte</p>
+        <a class="spotlight-cta" href="Pages/obras.html#pipe">Ver más →</a>
+      </div>
+    </article>
+  </aside>
+</section>
+
+</section>
+<!-- SEPARADOR entre mitades (alto similar al header/footer) -->
+<div class="band-gap band-gap--second" aria-hidden="true">
+  <img src="../Fuentes/Ojo sueño.png" alt="Ojo sueño" class="ojo-sueno-separador">
+</div>
+<!-- CINTA FULL-WIDTH CON FONDO CAMBIADO -->
+<section class="home-2-band full-bleed">
+  <div class="wrap">
+    <!-- Segunda mitad vertical (contenido como lo tenías) -->
+    <section class="home-2">
+      <!-- Columna 2/3 (izquierda): foto + cita -->
+      <div class="breton-wrap">
+        <figure class="breton-media">
+          <img src="img/André Breton 1.jpg" alt="André Breton">
+        </figure>
+        <div class="breton-copy">
+          <blockquote class="breton-quote">
+            “Querida imaginación, lo que amo sobre todo de ti, es que no perdonas”.
+          </blockquote>
+          <p class="breton-author">André Breton</p>
+        </div>
+      </div>
+      <!-- Columna 1/3 (derecha): carrusel -->
+     <aside class="home-2-carousel" data-carousel>
+  <div class="car-viewport">
+    <button class="car-arrow prev" aria-label="Anterior">❮</button>
+    <ul class="car-track">
+  <!-- 1) Max Ernst → Artistas -->
+  <li class="car-item">
+    <a class="car-link" href="Pages/artistas.html" aria-label="Ir a Artistas">
+      <img src="img/Max Ernst 1.jpg" alt="Max Ernst">
+      <span class="car-caption">Descubrí artistas</span>
+    </a>
+  </li>
+  <!-- 2) La persistencia de la memoria → Obras -->
+  <li class="car-item">
+    <a class="car-link" href="Pages/obras.html" aria-label="Ir a Obras">
+      <img src="img/La persistencia de la memoria .webp" alt="La persistencia de la memoria, Salvador Dalí">
+      <span class="car-caption">Descubrí obras</span>
+    </a>
+  </li>
+  <!-- 3) Manifiesto surrealista → Historia -->
+  <li class="car-item">
+    <a class="car-link" href="Pages/historia.html" aria-label="Ir a Historia">
+      <img src="img/manifiesto surrealista 1.jpg" alt="Manifiesto surrealista">
+      <span class="car-caption">Conocé la historia</span>
+    </a>
+  </li>
+  <!-- 4) Grupo surrealista reunido → Galería -->
+  <li class="car-item">
+    <a class="car-link" href="Pages/galeria.html" aria-label="Ir a Galería">
+      <img src="img/Grupo surrealista reunido 1.jpg" alt="Grupo surrealista reunido">
+      <span class="car-caption">Descubrí los archivos</span>
+    </a>
+  </li>
+</ul>
+
+    <button class="car-arrow next" aria-label="Siguiente">❯</button>
+  </div>
+</aside>
+
+    </section>
+    <!-- SEPARADOR inferior (queda dentro de la banda para que no cambie el color) -->
+    <div class="band-gap" aria-hidden="true"></div>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-left">
+      <a class="footer-brand" href="index.html" aria-label="Inicio: Surrealismo">
+        <!-- Usá la misma ruta de imagen que en tu header de index -->
+        <img src="../Fuentes/Isologotipo.png" alt="Surrealismo" class="footer-logo">
+      </a>
+      <p class="copyright">© 2025 | Todos los derechos reservados | Dante Garcia Cozzi</p>
+    </div>
+
+    <div class="footer-right">
+      <!-- Instagram (linkearemos después) -->
+ <!-- IG: sin borde y con gradiente dorado en hover -->
+<a class="social-btn" href="https://www.instagram.com/portfolio.dantecozzi?igsh=MXdsb3ludncxMXF2Zg%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram · Portfolio">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+    <defs>
+      <!-- gradiente hover: #ffe692 → #ffd447 -->
+      <linearGradient id="igGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"  stop-color="#7aa2ff"/>
+        <stop offset="100%" stop-color="#a477ff"/>
+      </linearGradient>
+    </defs>
+    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18.5 6.5a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+  </svg>
+</a>
+
+    </div>
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

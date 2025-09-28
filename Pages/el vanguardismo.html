@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El vanguardismo · Surrealismo</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+ <link rel="icon" type="image/png" href="../../Fuentes/Isotipo.png?v=1">
+
+  <style>
+    :root{
+      --lila:#191970;          
+      --franja:#191970;        /* azul de la franja */
+      --lado-w: clamp(220px, 23vw, 320px);
+      --texto:#e8ecff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      background:#000;
+      color:var(--texto);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    /* Layout: franja izquierda fija + área derecha con fondo */
+    .page{
+      min-height:100dvh;
+      display:grid;
+      grid-template-columns: var(--lado-w) 1fr;
+    }
+    /* Franja izquierda */
+  .side{
+  /* ya lo tenés */
+  background: var(--franja);
+  display:grid;
+  place-items:center;
+  padding:1rem;
+  /* nuevo para alojar la capa de textura */
+  position: relative;
+  isolation: isolate;
+  }
+  .side::before{
+  content:"";
+  position:absolute; inset:0;
+  z-index:0;                 /* debajo del h1 */
+  background:#9370db;        /* color de la textura (lila) */
+  opacity:.85;               /* ajustá intensidad si querés */
+  pointer-events:none;
+  /* la imagen sólo como MÁSCARA → coloreamos con el background */
+  -webkit-mask-image: url("../../Fuentes/textura-ai.png");
+          mask-image: url("../../Fuentes/textura-ai.png");
+  -webkit-mask-size: 200px;  /* “pequeña”, como el fondo del sitio */
+          mask-size: 200px;
+  -webkit-mask-repeat: repeat;
+          mask-repeat: repeat;
+  -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+}
+    /* Título vertical centrado (de abajo hacia arriba) */
+    .side h1{
+      margin:0;
+      font-family:'Nosifer', cursive;
+      font-size: clamp(1.8rem, 4.6vw, 3rem);
+      line-height:1;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      letter-spacing:.03em;
+      text-align:center;
+      transform: rotate(180deg);
+      transform-origin: center;
+      position: relative;
+      z-index: 1;
+    }
+    /* Panel derecho con imagen de fondo y overlay */
+    .hero{
+      display:flex;
+      position:relative;
+      isolation:isolate;
+      background: url("../img/Fondo\ el\ vanguardismo.webp") center/cover no-repeat;
+      align-items: center;        /* centra VERTICALMENTE el contenido */
+      justify-content: flex-start;/* mantiene el texto a la izquierda */
+      min-height: 100dvh;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:0;
+      background: var(--lila);
+      opacity:.45;
+      mix-blend-mode:multiply;
+      z-index:-1;
+    }
+    /* Texto sobre la imagen */
+    .copy{
+      max-width: min(78ch, 90%);
+      margin-inline: clamp(1rem, 5vw, 4rem);
+      margin-block: 0;
+      font-family: 'Special Elite', cursive;
+      font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+      line-height: 1.8;
+      text-shadow: 0 1px 1px rgba(0,0,0,.25);
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
+    .nosifer-pill{
+      display: inline-block;
+      padding: .1em .4em;
+      border-radius: .5em;
+      background: #9370db;
+      color: #ffffff;
+      font-family: 'Nosifer', cursive;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+      line-height: 1;
+      vertical-align: baseline;
+      white-space: nowrap;
+    }
+    /* ===== Botones de navegación (flotantes, solo texto) ===== */
+.page-nav__left,
+.page-nav__right{
+  position: fixed;
+  bottom: 20px;
+  z-index: 5;
+}
+.page-nav__left{ left: 20px; }
+.page-nav__right{ right: 20px; display: grid; gap: 10px; }
+
+.btn-nav{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .25rem .35rem;            /* mínimo para clic cómodo sin “caja” visual */
+  background: transparent;           /* sin fondo */
+  border: 0;                         /* sin borde */
+  color: #ffffff;                    /* blanco base */
+  font-weight: 800;
+  font-family: "Cinzel Decorative", serif;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  transition: color .2s ease, text-shadow .2s ease;
+}
+/* Las flechas son texto, heredan el estilo del botón */
+.btn-nav .tri{ font-size: 1.05em; line-height: 1; }
+/* Hover/focus: degradado aplicado al TEXTO (no al fondo) */
+.btn-nav:hover,
+.btn-nav:focus-visible{
+  background-image: linear-gradient(90deg, #7aa2ff, #a477ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  outline: none;
+}
+/* Accesibilidad: anillo discreto solo en teclado */
+.btn-nav:focus-visible{
+  box-shadow: 0 0 0 2px rgba(122,162,255,.45);
+  border-radius: 6px; /* sólo para el anillo, no hay caja visual normal */
+}
+/* Responsive */
+@media (max-width: 720px){
+  .page-nav__left{ left: 12px; bottom: 12px; }
+  .page-nav__right{ right: 12px; bottom: 12px; gap: 8px; }
+}
+  </style>
+</head>
+<body>
+  <main class="page" role="main">
+    <aside class="side" aria-label="Sección lateral">
+      <h1>El vanguardismo</h1>
+    </aside>
+
+    <section class="hero" aria-label="Introducción">
+      <p class="copy">
+        El vanguardismo artístico es un movimiento que surgió a comienzos del siglo XX y se caracteriza por su espíritu de 
+        <span class="nosifer-pill">ruptura</span> con las tradiciones estéticas establecidas. Su objetivo principal fue renovar el arte, alejándose de los modelos académicos y realistas para explorar nuevas formas de 
+        <span class="nosifer-pill">expresión</span>. Basado en la experimentación y la libertad creativa, buscaba reflejar los cambios sociales, científicos y tecnológicos de la época. Dentro de él se agrupan distintas corrientes (como el futurismo, el dadaísmo, el surrealismo o el cubismo), todas unidas por la intención de cuestionar lo <span class="nosifer-pill">convencional</span>, proponer lenguajes innovadores y transformar la relación entre arte, artista y espectador.
+      </p>
+    </section>
+  </main>
+
+  <!-- Navegación inferior -->
+  <div class="page-nav__left">
+    <a class="btn-nav" href="historia.html" aria-label="Volver a Historia">
+      <!-- Triángulo lleno apuntando a la izquierda -->
+      <span class="tri">◀</span> Historia
+    </a>
+  </div>
+
+  <div class="page-nav__right">
+    <a class="btn-nav" href="el movimiento.html" aria-label="Ir a: El movimiento">
+      <!-- Triángulo lleno apuntando a la derecha -->
+      El movimiento <span class="tri">▶</span>
+    </a>
+
+    <a class="btn-nav" href="el manifiesto.html" aria-label="Ir a: El manifiesto">
+      El manifiesto <span class="tri">▶</span>
+    </a>
+  </div>
+</body>
+</html>
+

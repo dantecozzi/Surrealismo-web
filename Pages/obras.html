@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Obras · Surrealismo</title>
+  <meta name="description" content="Biblioteca web sobre el surrealismo: artistas, obras, manifiesto y recursos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+ <link rel="icon" type="image/png" href="../../Fuentes/Isotipo.png?v=1">
+
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+  <div class="wrap row between center">
+    <a class="brand" href="../index.html" aria-label="Inicio: Surrealismo">
+      <!-- Ajustá esta ruta si tu carpeta Fuentes está en otro lugar -->
+      <img src="../../Fuentes/Isologotipo.png" alt="Surrealismo" class="logo" />
+    </a>
+
+    <nav aria-label="Principal">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+
+      <ul id="menu" class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="obras.html">Obras</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <!-- Lupa + Buscador -->
+      <div class="header-search" data-hs>
+        <button class="hs-toggle" aria-label="Abrir buscador" aria-expanded="false" aria-controls="site-search">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <defs>
+              <linearGradient id="gradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"  stop-color="#7aa2ff"/>
+                <stop offset="100%" stop-color="#a477ff"/>
+              </linearGradient>
+            </defs>
+            <!-- Blanco por defecto (currentColor); gradiente en hover vía CSS -->
+            <path d="M10.5 3a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Zm6.78 9.22 4.25 4.25-1.56 1.56-4.25-4.25 1.56-1.56Z" fill="currentColor"/>
+          </svg>
+        </button>
+
+        <form id="site-search" class="hs-form" role="search" aria-label="Buscar en el sitio" action="buscar.html" method="get">
+          <input class="hs-input" type="search" name="q" placeholder="Encontrá artistas, obras, técnicas..." autocomplete="off" spellcheck="false" aria-label="Ingresá tu búsqueda">
+          <button class="hs-submit" aria-label="Buscar">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M2 21 23 12 2 3v7l15 2-15 2v7z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>
+  <main id="contenido" class="works-main">
+    <div class="works-container">
+      
+      <!-- Filtros de búsqueda (1/3 izquierda) -->
+      <aside class="works-filters">
+        <h2>Filtros</h2>
+        
+        <div class="filter-section">
+          <h3>Disciplina</h3>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="cine" class="discipline-filter">
+              <span>Cine</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="pintura" class="discipline-filter">
+              <span>Pintura</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="escultura" class="discipline-filter">
+              <span>Escultura</span>
+        </label>
+            <label class="filter-option">
+              <input type="checkbox" value="fotografia" class="discipline-filter">
+              <span>Fotografía</span>
+        </label>
+            <label class="filter-option">
+              <input type="checkbox" value="literatura" class="discipline-filter">
+              <span>Literatura</span>
+        </label>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Época</h3>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="1917-1923" class="era-filter">
+              <span>1917 - 1923</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="1924-1929" class="era-filter">
+              <span>1924 - 1929</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="1930-1939" class="era-filter">
+              <span>1930 - 1939</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="1939-1945" class="era-filter">
+              <span>1939 - 1945</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="1945-1966" class="era-filter">
+              <span>1945 - 1966</span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Contenido de obras (2/3 derecha) -->
+      <section class="works-content">
+        <header class="works-header">
+          <h1>Obras que rompieron la <span class="accent">lógica</span></h1>
+        </header>
+
+        <div class="works-grid">
+          <!-- Obra 1 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">La persistencia de la memoria</h2>
+              <div class="work-photo">
+                <img src="../img/La persistencia de la memoria .webp" alt="La persistencia de la memoria" />
+              </div>
+              <p class="work-year">1931 - Salvador Dalí</p>
+            </div>
+            <div class="work-biography">
+              <p>Esta pintura se ha convertido en un ícono del imaginario surrealista al mostrar relojes blandos que parecen derretirse en un paisaje desolado. El tiempo, firme y rígido en la vida cotidiana, aquí se vuelve frágil, relativo y deformable como en los sueños. La obra refleja la preocupación cultural de la época por las teorías científicas y psicoanalíticas que ponían en duda la noción objetiva del tiempo y de la realidad. Su atmósfera onírica invita a contemplar la fugacidad de la existencia y la fragilidad de las certezas humanas.</p>
+            </div>
+          </article>
+
+
+          <!-- Obra 3 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Un chien andalou</h2>
+              <div class="work-photo">
+                <img src="../img/Un chien andalou.jpeg" alt="Un chien andalou" />
+              </div>
+              <p class="work-year">1929 - Luis Buñuel</p>
+            </div>
+            <div class="work-biography">
+              <p>Este filme desafía toda lógica narrativa para sumergir al espectador en una secuencia de imágenes impactantes y perturbadoras. Escenas que van de lo poético a lo grotesco ponen en evidencia el inconsciente, el deseo y la violencia latente en la condición humana. La obra rompe con las convenciones cinematográficas de su tiempo y abre un espacio para el cine como herramienta de choque, capaz de provocar y desestabilizar. En el clima de las vanguardias, se convirtió en un manifiesto visual del poder del sueño sobre la razón.</p>
+            </div>
+          </article>
+
+          <!-- Obra 4 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Manifiesto Surrealista</h2>
+              <div class="work-photo">
+                <img src="../img/manifiesto surrealista 1.jpg" alt="Manifiesto Surrealista" />
+              </div>
+              <p class="work-year">1924 - André Breton</p>
+            </div>
+            <div class="work-biography">
+              <p>Este texto literario no solo inauguró el movimiento, sino que también lo definió como una búsqueda de libertad absoluta. Allí se plantea que el inconsciente, los sueños y la escritura automática son caminos para liberar al pensamiento de la censura racional y moral. El manifiesto surge en un contexto de desencanto posterior a la Primera Guerra Mundial, donde las vanguardias buscaban nuevas formas de reinventar el arte y la vida. Se convirtió en la base teórica que sostuvo durante décadas las exploraciones surrealistas en literatura, pintura, cine y fotografía.</p>
+            </div>
+          </article>
+
+          <!-- Obra 5 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">La trahison des images</h2>
+              <div class="work-photo">
+                <img src="../img/Ceci n'esta pas une pipe.jpg" alt="La trahison des images" />
+              </div>
+              <p class="work-year">1928 - René Magritte</p>
+            </div>
+            <div class="work-biography">
+              <p>Un cuadro que presenta la imagen de una pipa acompañada de la frase “esto no es una pipa”, cuestionando la relación entre realidad, representación y lenguaje. La obra rompe la confianza tradicional en que lo que vemos corresponde a lo que es, planteando que las imágenes son solo signos, no la realidad misma. En un momento cultural marcado por el auge de la semiótica y la reflexión filosófica, esta pieza invita a desconfiar de la percepción inmediata y a repensar los límites entre arte y objeto.</p>
+            </div>
+          </article>
+
+          <!-- Obra 6 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">L'âge d'or</h2>
+              <div class="work-photo">
+                <img src="../img/l' age d' or.jpg" alt="L'âge d'or" />
+              </div>
+              <p class="work-year">1930 - Luis Buñuel</p>
+            </div>
+            <div class="work-biography">
+              <p>Esta película explora los conflictos entre el deseo humano y las normas sociales que intentan reprimirlo, a través de escenas cargadas de simbolismo erótico y violento. El relato se mueve entre lo absurdo y lo poético, planteando una crítica feroz a las instituciones religiosas y burguesas. En su momento, la obra fue escandalosa, y su radicalidad reflejaba el clima político y cultural de entreguerras, cuando el surrealismo se posicionaba como una vanguardia de provocación y liberación frente a lo establecido.</p>
+            </div>
+          </article>
+
+          <!-- Obra 7 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">La condition humaine</h2>
+              <div class="work-photo">
+                <img src="../img/la condition humaine.jpg" alt="La condition humaine" />
+              </div>
+              <p class="work-year">1933 - René Magritte</p>
+            </div>
+            <div class="work-biography">
+              <p>En este lienzo, la representación de una ventana abierta al paisaje contiene a su vez una pintura idéntica del mismo paisaje, borrando la frontera entre lo real y lo pintado. La obra plantea que nuestra percepción del mundo siempre está mediada por representaciones y que no existe un acceso directo a la realidad. En un contexto cultural donde la filosofía y la psicología cuestionaban la objetividad del conocimiento, esta pintura se convirtió en un emblema de la reflexión sobre la mirada, la ilusión y la verdad.</p>
+        </div>
+      </article>
+
+          <!-- Obra 8 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Les amants</h2>
+              <div class="work-photo">
+                <img src="../img/les amants.jpg" alt="Les amants" />
+              </div>
+              <p class="work-year">1928 - René Magritte</p>
+            </div>
+            <div class="work-biography">
+              <p>Una pintura que muestra a dos figuras besándose con la cabeza cubierta por telas, impidiendo el contacto directo entre sus rostros. La imagen transmite tanto deseo como frustración, amor y distancia, sugiriendo la imposibilidad de una unión total entre los seres humanos. Su atmósfera inquietante refleja la tensión entre lo íntimo y lo prohibido, lo cercano y lo inalcanzable. En un contexto cultural de entreguerras, donde la fragilidad emocional era latente, esta obra se erige como metáfora del misterio y la incomunicación en las relaciones humanas.</p>
+        </div>
+      </article>
+          <!-- Obra 9 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">La coquille et le clergyman</h2>
+              <div class="work-photo">
+                <img src="../img/la coquille et le clergyman.jpg" alt="La coquille et le clergyman" />
+              </div>
+              <p class="work-year">1928 - Germaine Dulac</p>
+            </div>
+            <div class="work-biography">
+              <p>Esta película despliega una sucesión de imágenes cargadas de simbolismo, donde el deseo, la represión y la religión se enfrentan en un lenguaje visual cercano al sueño. Lejos de una narrativa tradicional, utiliza asociaciones libres, fragmentos y metáforas que desorientan al espectador y lo sumergen en lo inconsciente. Su fuerza radica en confrontar lo prohibido, mostrando cómo lo erótico se entrelaza con lo sagrado, en un contexto cultural de entreguerras donde el surrealismo buscaba liberar la imaginación reprimida.</p>
+            </div>
+          </article>
+
+          <!-- Obra 10 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Meshes of Afternoon</h2>
+              <div class="work-photo">
+                <img src="../img/meshes of the afternoon.jpeg" alt="Meshes of Afternoon" />
+              </div>
+              <p class="work-year">1943 - Maya Deren</p>
+            </div>
+            <div class="work-biography">
+              <p>Un film experimental que convierte lo cotidiano en un laberinto onírico. Objetos simples como una llave, una flor o un espejo se repiten obsesivamente, transformando la casa en un espacio psicológico cargado de tensión. La obra sugiere la lucha interna de una conciencia fragmentada, atrapada entre lo real y lo ilusorio. Surge en un momento en que el cine independiente estadounidense exploraba nuevas formas de expresión, y se volvió un referente de cómo el surrealismo podía habitar también lo íntimo y doméstico.</p>
+            </div>
+          </article>
+
+          <!-- Obra 11 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">La sangre de un poeta</h2>
+              <div class="work-photo">
+                <img src="../img/la sangre de un poeta.jpg" alt="La sangre de un poeta" />
+              </div>
+              <p class="work-year">1930 - Jean Cocteau</p>
+            </div>
+            <div class="work-biography">
+              <p>Este filme plantea un viaje poético al interior de la mente creadora, donde se mezclan la vida, la muerte, el arte y la memoria. Sus escenas funcionan como alegorías, con puertas que llevan a mundos imposibles y cuerpos que desafían la lógica física. Más que contar una historia, propone un ensayo visual sobre el papel del artista y la vulnerabilidad del ser humano frente a su imaginación. En un clima cultural en que el cine buscaba consolidarse como arte autónomo, esta obra abrió un camino hacia la poesía visual pura.</p>
+            </div>
+          </article>
+
+          <!-- Obra 12 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Las Hurdes, tierra sin pan</h2>
+              <div class="work-photo">
+                <img src="../img/las hurdes, tierra sin pan.jpg" alt="Las Hurdes, tierra sin pan" />
+              </div>
+              <p class="work-year">1933 - Luis Buñuel</p>
+            </div>
+            <div class="work-biography">
+              <p>Un documental que retrata la miseria extrema de una región aislada, mostrando escenas crudas de hambre, enfermedad y muerte. Aunque presentado con un tono “científico”, el montaje introduce ironía y distancia, subrayando la indiferencia de un país frente a su propio abandono. El choque entre lo real y la mirada surrealista convierte a la obra en una denuncia social disfrazada de experimento fílmico. En un contexto político de tensiones previas a la guerra civil, la película funcionó como espejo incómodo de una realidad que muchos preferían ignorar.</p>
+            </div>
+          </article>
+
+          <!-- Obra 13 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">El nacimiento del mundo</h2>
+              <div class="work-photo">
+                <img src="../img/el nacimiento del mundo.jpg" alt="El nacimiento del mundo" />
+              </div>
+              <p class="work-year">1925 - Joan Miró</p>
+            </div>
+            <div class="work-biography">
+              <p>Un lienzo que sugiere un espacio en gestación, donde manchas, colores y formas parecen surgir de manera espontánea, como si asistiera al origen de la vida. El cuadro transmite la sensación de lo primitivo y lo indomado, vinculando el automatismo surrealista con la idea de creación cósmica. En un momento histórico marcado por la fascinación con el psicoanálisis y lo inconsciente, la obra se convierte en metáfora de lo que emerge sin control, reflejando tanto la libertad creativa como la fuerza del caos.</p>
+            </div>
+          </article>
+
+          <!-- Obra 14 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">La ciudad dormida</h2>
+              <div class="work-photo">
+                <img src="../img/la ciudad dormida.webp" alt="La ciudad dormida" />
+              </div>
+              <p class="work-year">1938 - Paul Delvaux</p>
+            </div>
+            <div class="work-biography">
+              <p>La pintura muestra un paisaje urbano detenido en el tiempo, poblado por figuras femeninas estáticas que parecen estar atrapadas en un sueño. La atmósfera es de calma inquietante, un silencio que roza lo perturbador. A través de lo cotidiano convertido en escenario fantasmagórico, transmite la fragilidad del mundo moderno entre guerras, cuando la rutina se podía quebrar en cualquier momento. La obra invita a pensar en lo enigmático de la existencia y en cómo lo familiar puede volverse extraño.</p>
+            </div>
+          </article>
+
+          <!-- Obra 15 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">La mujer, vieja o joven</h2>
+              <div class="work-photo">
+                <img src="../img/la mujer vieja o joven.jpg" alt="La mujer, vieja o joven" />
+              </div>
+              <p class="work-year">1923 - Max Ernst</p>
+            </div>
+            <div class="work-biography">
+              <p>Una representación ambigua donde el rostro oscila entre distintas edades, sin definirse claramente como anciana o muchacha. Esa incertidumbre convierte la figura en una metáfora de la transformación constante del ser humano y de la fragilidad de la identidad. En lugar de una imagen estática, el cuadro propone un flujo entre opuestos, desafiando la forma clásica de retratar al cuerpo. El clima cultural de las vanguardias, que buscaba romper las convenciones del arte académico, encuentra aquí un ejemplo de experimentación radical.</p>
+            </div>
+          </article>
+
+          <!-- Obra 16 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Mujer saliendo del psicoanalista</h2>
+              <div class="work-photo">
+                <img src="../img/mujer saliendo del psicoanalista.jpg" alt="Mujer saliendo del psicoanalista" />
+              </div>
+              <p class="work-year">1960 - Remedios Varo</p>
+            </div>
+            <div class="work-biography">
+              <p>La obra muestra una figura femenina que atraviesa un umbral, como si acabara de terminar un proceso de introspección profunda. La escena está cargada de misterio, con un aire enigmático que transmite tanto liberación como incertidumbre. El cuadro refleja la influencia del psicoanálisis en la cultura de mediados del siglo XX, donde los sueños y el inconsciente eran considerados caminos hacia la verdad interior. Es, además, una afirmación de la emancipación femenina en un espacio dominado por miradas masculinas.</p>
+            </div>
+          </article>
+
+          <!-- Obra 17 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">El mundo mágico de los mayas</h2>
+              <div class="work-photo">
+                <img src="../img/el mundo magico de los mayas.jpg" alt="El mundo mágico de los mayas" />
+              </div>
+              <p class="work-year">1963 - Leonora Carrington</p>
+            </div>
+            <div class="work-biography">
+              <p>Un universo pictórico que fusiona símbolos prehispánicos con un lenguaje onírico y fantástico. La obra busca traducir la cosmovisión mesoamericana al imaginario surrealista, entretejiendo mitología, naturaleza y espiritualidad. Representa un diálogo cultural entre Europa y América Latina, en un momento histórico en que los artistas exiliados y migrantes exploraban nuevas raíces para su creación. Es una celebración de lo ancestral como fuente de misterio y poesía universal.</p>
+            </div>
+          </article>
+
+          <!-- Obra 18 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Dos niños amenazados por un ruiseñor</h2>
+              <div class="work-photo">
+                <img src="../img/dos niños amenzadados por un ruiseñor.jpg" alt="Dos niños amenazados por un ruiseñor" />
+              </div>
+              <p class="work-year">1924 - Max Ernst</p>
+            </div>
+            <div class="work-biography">
+              <p>Un escenario donde la inocencia se convierte en pesadilla: dos niños aparecen en peligro frente a un pájaro gigantesco que invade lo doméstico. La escena, a la vez lúdica y aterradora, condensa la lógica del sueño infantil, donde lo cotidiano puede transformarse en monstruo. El juego con las proporciones rompe con la realidad y plantea una metáfora del miedo irracional. En un clima cultural de experimentación con el collage y el ensamblaje, esta obra es clave para entender la teatralidad del surrealismo.</p>
+            </div>
+          </article>
+
+          <!-- Obra 19 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">La muñeca</h2>
+              <div class="work-photo">
+                <img src="../img/la muñeca.jpg" alt="La muñeca" />
+              </div>
+              <p class="work-year">1934 - Hans Bellmer</p>
+            </div>
+            <div class="work-biography">
+              <p>Una serie de figuras articuladas y fragmentadas que evocan tanto lo erótico como lo perturbador. Sus formas desafían la idea clásica de belleza, presentando el cuerpo como objeto de deseo y, al mismo tiempo, de inquietud. La muñeca es símbolo de lo reprimido, de lo infantil erotizado y de lo siniestro escondido bajo lo cotidiano. En una Europa marcada por la violencia y las tensiones políticas, estas esculturas materializan las obsesiones ocultas de una época convulsa.</p>
+            </div>
+          </article>
+
+          <!-- Obra 20 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Pájaro en un casquete</h2>
+              <div class="work-photo">
+                <img src="../img/pajaro en un casquete.jpg" alt="Pájaro en un casquete" />
+              </div>
+              <p class="work-year">1917 - Jean Arp (Hans Arp)</p>
+            </div>
+            <div class="work-biography">
+              <p>Una forma abstracta y biomórfica que recuerda tanto a un ser natural como a una figura cósmica. La pieza celebra el azar y la simplicidad de lo orgánico, en un juego con las leyes de la naturaleza que rompe con la rigidez de la escultura académica. Esta obra surge en un contexto donde los artistas buscaban devolver al arte un vínculo con lo esencial y lo espontáneo, reivindicando lo elemental frente a la devastación de la guerra.</p>
+            </div>
+          </article>
+
+          <!-- Obra 21 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">La mujer cuchara</h2>
+              <div class="work-photo">
+                <img src="../img/la mujer cuchara.jpg" alt="La mujer cuchara" />
+              </div>
+              <p class="work-year">1927 - Alberto Giacometti</p>
+            </div>
+            <div class="work-biography">
+              <p>Una figura estilizada que combina la sensualidad femenina con la forma utilitaria de un objeto cotidiano. La escultura es ambigua, entre lo humano y lo inanimado, y provoca una reflexión sobre la función, el deseo y el cuerpo. Representa la experimentación surrealista en el terreno de la forma tridimensional, donde el objeto deja de ser práctico para convertirse en metáfora. En un contexto cultural de búsqueda de nuevas expresiones, esta pieza señala cómo lo surreal podía habitar lo más simple.</p>
+            </div>
+          </article>
+
+          <!-- Obra 22 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Personaje</h2>
+              <div class="work-photo">
+                <img src="../img/personaje.jpg" alt="Personaje" />
+              </div>
+              <p class="work-year">1931 - Joan Miró</p>
+            </div>
+            <div class="work-biography">
+              <p>Una escultura colorida y fantástica que parece salida de un sueño infantil. Sus formas simples recuerdan tanto a símbolos arcaicos como a criaturas imaginarias, integrando humor y lirismo. La obra plantea que lo onírico puede habitar lo cotidiano y lo público, rompiendo las barreras entre el arte y la vida. En un contexto cultural de entreguerras, es también una respuesta lúdica frente a la gravedad de la realidad histórica.</p>
+            </div>
+          </article>
+
+          <!-- Obra 23 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Le violon d'Ingres</h2>
+              <div class="work-photo">
+                <img src="../img/le violon d' ingres.jpeg" alt="Le violon d'Ingres" />
+              </div>
+              <p class="work-year">1924 - Man Ray</p>
+            </div>
+            <div class="work-biography">
+              <p>Un retrato femenino transformado en instrumento musical mediante una simple intervención visual. El cuerpo se convierte en metáfora y objeto de deseo, pero también en ironía sobre la mirada masculina. Esta imagen es un ejemplo del poder de la fotografía para transformar lo real en símbolo, y refleja el espíritu surrealista de jugar con lo familiar hasta volverlo extraño. Su difusión marcó un hito en el cruce entre moda, erotismo y vanguardia.</p>
+            </div>
+          </article>
+
+          <!-- Obra 24 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Portrait of Space</h2>
+              <div class="work-photo">
+                <img src="../img/Portrait of Space.webp" alt="Portrait of Space" />
+              </div>
+              <p class="work-year">1937 - Lee Miller</p>
+            </div>
+            <div class="work-biography">
+              <p>Un paisaje árido enmarcado por una tela rasgada que abre un vacío hacia el horizonte. La fotografía convierte lo concreto en metáfora de lo infinito, sugiriendo que el espacio no es solo físico, sino también mental. Esta imagen refleja la fascinación cultural por nuevas formas de percepción y por la idea de frontera como límite y apertura. En un contexto colonial, también puede leerse como crítica implícita al contraste entre lo material y lo espiritual.</p>
+            </div>
+          </article>
+
+          <!-- Obra 25 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">El simulacro</h2>
+              <div class="work-photo">
+                <img src="../img/El simulacro.jpg" alt="El simulacro" />
+              </div>
+              <p class="work-year">1936 - Dora Maar</p>
+            </div>
+            <div class="work-biography">
+              <p>Una imagen construida a partir de fragmentos y superposiciones, que crea una escena inquietante y ambigua. La fotografía juega con la idea de apariencia, de aquello que imita la realidad sin serlo, cuestionando la capacidad del ojo de captar la verdad. Esta obra responde a un momento cultural donde la fotografía se afirmaba como medio artístico autónomo y como espacio para explorar lo imaginario.</p>
+            </div>
+          </article>
+
+          <!-- Obra 26 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">La Nébuleuse</h2>
+              <div class="work-photo">
+                <img src="../img/La Nébuleuse.jpg" alt="La Nébuleuse" />
+              </div>
+              <p class="work-year">1939 - Raoul Ubac</p>
+            </div>
+            <div class="work-biography">
+              <p>Una imagen difusa que evoca un universo abstracto, lleno de veladuras y formas inasibles. Lo que podría ser materia sólida se convierte en nube, en ilusión, en misterio. La obra transmite la fascinación surrealista por lo indefinido y lo intangible, por aquello que no se puede explicar racionalmente. En un contexto histórico dominado por el conflicto bélico, esta pieza funciona como metáfora del caos y de lo invisible que acecha.</p>
+            </div>
+          </article>
+
+          <!-- Obra 27 -->
+          <article class="work-profile">
+            <div class="work-details">
+              <h2 class="work-title">Noire et Blanche</h2>
+              <div class="work-photo">
+                <img src="../img/Noire et Blanche.jpg" alt="Noire et Blanche" />
+              </div>
+              <p class="work-year">1926 - Man Ray</p>
+            </div>
+            <div class="work-biography">
+              <p>Un retrato sereno de una mujer descansando junto a una máscara africana. El contraste entre piel y máscara, luz y sombra, cultura europea y cultura “otra”, crea un juego de oposiciones cargado de tensión. La obra refleja el interés de la época por el arte no occidental, considerado fuente de lo primitivo y lo esencial. Al mismo tiempo, propone una meditación sobre la identidad, lo ritual y el diálogo entre mundos.</p>
+            </div>
+          </article>
+        </div>
+    </section>
+
+    </div>
+  </main>
+   <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-left">
+      <a class="footer-brand" href="index.html" aria-label="Inicio: Surrealismo">
+        <!-- Usá la misma ruta de imagen que en tu header de index -->
+        <img src="../../Fuentes/Isologotipo.png" alt="Surrealismo" class="footer-logo">
+      </a>
+      <p class="copyright">© 2025 | Todos los derechos reservados | Dante Garcia Cozzi</p>
+    </div>
+
+    <div class="footer-right">
+      <!-- Instagram (linkearemos después) -->
+ <!-- IG: sin borde y con gradiente dorado en hover -->
+<a class="social-btn" href="https://www.instagram.com/portfolio.dantecozzi?igsh=MXdsb3ludncxMXF2Zg%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram · Portfolio">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+    <defs>
+      <!-- gradiente hover: #ffe692 → #ffd447 -->
+      <linearGradient id="igGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"  stop-color="#7aa2ff"/>
+        <stop offset="100%" stop-color="#a477ff"/>
+      </linearGradient>
+    </defs>
+    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18.5 6.5a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+  </svg>
+</a>
+
+    </div>
+  </div>
+</footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
